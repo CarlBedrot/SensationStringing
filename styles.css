@@ -1,0 +1,193 @@
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: rgb(224, 217, 115);
+    color: rgb(252, 122, 30);
+    /* font-family: 'Tron', sans-serif; */
+    text-align: center;
+    display: flex; /* Add this line */
+    flex-direction: column; /* Add this line */
+    min-height: 100vh; /* Add this line */
+}
+
+
+#content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    flex-grow: 1; /* Add this line */
+
+  }
+  
+  main {
+    flex-grow: 1; /* This makes the main content grow and take up all available space */
+  }
+  
+
+
+
+h1, h3 { 
+    margin-top: 55px;
+}
+#button-container {
+    position: relative;
+    width: 200px;
+    height: 100px;
+    margin: 100px auto;
+    font-family: 'Orbitron', sans-serif; /* Same font as rest of the page */
+
+}
+
+.firework {
+    position: absolute;
+    display: none;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(252, 122, 30); /* Updated firework color */
+    animation: explode 1s ease-out;
+}
+
+@keyframes explode {
+    0% { transform: scale(0); opacity: 1; }
+    100% { transform: scale(1); opacity: 0; }
+}
+
+button {
+    background-color: rgb(252, 122, 30); /* Updated button color */
+    color: rgb(224, 217, 115); /* Updated text color inside the button */
+    font-size: 20px;
+    padding: 10px 30px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s;
+    font-family: 'Orbitron', sans-serif; /* Same font as rest of the page */
+
+}
+
+button:hover {
+    background-color: #f8941d; /* Slightly darker shade for the hover effect */
+}
+
+#counter {
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+/*  NAVBAR */
+
+/* ... existing styles ... */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(252, 122, 30);
+    z-index: 1000;
+}
+
+#hamburger-menu {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+}
+
+.bar {
+    background-color: rgb(224, 217, 115);
+    height: 5px;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: auto;
+    transition: 0.4s;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 900;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#customers-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#customers-list li {
+    padding: 10px;
+    border-bottom: 1px solid rgb(252, 122, 30);
+}
+
+#customer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#customer-form input {
+    padding: 8px;
+    background-color: rgb(224, 217, 115);
+    border: none;
+    font-family: 'Orbitron', sans-serif; /* Same font as rest of the page */
+    outline: none;
+}
+
+#customer-form button {
+    padding: 10px;
+    background-color: rgb(252, 122, 30);
+    color: rgb(224, 217, 115);
+    font-family: 'Orbitron', sans-serif; /* Same font as rest of the page */
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+
+/* remove button  */
+#remove-button {
+    padding: 5px 10px;
+    background-color: rgb(252, 122, 30);
+    color: rgb(224, 217, 115);
+    /* font-family: 'Orbitron', sans-serif; */
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 12px;
+}
+
+#customers-list li.selected {
+    background-color: rgba(252, 122, 30, 0.3);
+}
+
+#customer-table-section { 
+    width: 90%;
+    margin: 20px auto;
+}
+
+#customer-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#customer-table th, #customer-table td { 
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#customer-table tr:nth-child(even) { 
+    background-color: #f2f2f2;
+}

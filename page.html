@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <title>Racket Restring Counter</title>
+</head>
+<body>
+<div id="content"> 
+    <div id="navbar">
+        <div id="hamburger-menu" onclick="toggleSidebar()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+    <div id="sidebar">
+        <h3>Customers</h3>
+        <form id="customer-form">
+            <input type="text" id="customer-name" placeholder="Name" required>
+            <input type="number" id="customer-kg" placeholder="KG" required>
+            <input type="number" id="customer-rackets" placeholder="Amount of rackets" required>
+            <button type="submit">Add</button>
+        </form>
+        <ul id="customers-list"></ul>
+        <button id="remove-button" onclick="removeCustomer()">Remove Customer</button>
+
+    </div>
+    <header>
+        <h1>Sensation Racket Tracker</h1>
+    </header>
+    <div id="button-container">
+        <button onclick="incrementCounter()">Restring</button>
+        <div class="firework" id="firework1"></div>
+        <div class="firework" id="firework2"></div>
+        <div class="firework" id="firework3"></div>
+        <div class="firework" id="firework4"></div>
+        <div class="firework" id="firework5"></div>
+    </div>
+    <div id="counter">0</div>
+    <section id="about">
+        <h2>Rackets restrung this summer</h2>
+        <p>This tracker counts the number of rackets restrung live!</p>
+    </section>
+    <section id="customer-table-section"> 
+        <h2>Customers</h2>
+        <table id="customer-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>KG</th>
+                    <th>Rackets</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            </tbody>
+        </table>
+        </section>
+</div> 
+    <footer>
+        <p>&copy; 2023 Beddan</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
