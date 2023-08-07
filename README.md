@@ -1,5 +1,7 @@
 # Sensation Racket Tracker
 
+Making updates
+
 Sensation Racket Tracker is a web application designed to track the number of rackets restrung live. It includes customer management features, such as adding and removing customers, as well as displaying specific details about customers. Sensational visual effects are used to enhance the experience when a racket is restrung.
 
 ## Features
