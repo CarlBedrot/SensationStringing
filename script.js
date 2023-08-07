@@ -1,9 +1,14 @@
 let count = 0;
-
+let charity = 0;
 function incrementCounter() {
   count++;
   document.getElementById("counter").textContent = count;
   showFireworks();
+}
+
+function giveToCharity() { 
+  charity += 20; 
+  document.getElementById('charitySummariser').textContent = charity;
 }
 
 function showFireworks() {
