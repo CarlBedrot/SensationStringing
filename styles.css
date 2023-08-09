@@ -212,3 +212,48 @@ button,
 .highlight {
   background-color: yellow;
 }
+
+#search-input {
+  width: 50%; /* or whatever width you prefer */
+  padding: 12px 20px;
+  margin: 20px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 25px; /* gives the rounded edges */
+  outline: none;
+  font-size: 16px; /* adjust as needed */
+  transition: border 0.3s; /* smooth transition effect for hover and focus */
+}
+
+#search-input:hover {
+  border: 1px solid #888; /* changes border color on hover */
+}
+
+#search-input:focus {
+  border: 1px solid #007BFF; /* changes border color on focus (when clicked inside) */
+  box-shadow: 0 0 8px 0 rgba(0,123,255,0.2); /* adds a subtle glow around the input when focused */
+}
+
+#search-input::placeholder { 
+  color: #aaa; /* color of the placeholder text */
+  font-style: italic; /* makes the placeholder text italic */
+}
+
+.search-container {
+  position: relative;
+  width: 80%;
+  margin: 20px auto;
+}
+
+.search-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+#search-input {
+  padding-left: 40px; /* This ensures that text doesn't overlap with the search icon */
+  /* ... rest of the styles ... */
+}
