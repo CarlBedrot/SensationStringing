@@ -1,0 +1,23 @@
+{
+  "name": "SensationStringing",
+  "version": "1.0.0",
+  "description": "Sensation Racket Tracker is a web application designed to track the number of rackets restrung live. It includes customer management features, such as adding and removing customers, as well as displaying specific details about customers. Sensational visual effects are used to enhance the experience when a racket is restrung.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlBedrot/SensationStringing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CarlBedrot/SensationStringing/issues"
+  },
+  "homepage": "https://github.com/CarlBedrot/SensationStringing#readme",
+  "devDependencies": {
+    "jest": "^29.6.2"
+  }
+}
