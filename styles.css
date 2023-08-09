@@ -214,7 +214,7 @@ button,
 }
 
 #search-input {
-  width: 50%; /* or whatever width you prefer */
+  width: 70%; /* or whatever width you prefer */
   padding: 12px 20px;
   margin: 20px 0;
   box-sizing: border-box;
@@ -241,19 +241,20 @@ button,
 
 .search-container {
   position: relative;
+  display: inline-block;
   width: 80%;
   margin: 20px auto;
 }
 
 .search-icon {
   position: absolute;
-  left: 20px;
+  left: 10px; /* adjust as needed */
   top: 50%;
   transform: translateY(-50%);
-  color: #aaa;
+  color: #aaa; /* adjust the color as needed */
+  pointer-events: none; /* to ensure the icon doesn't interfere with the input click */
 }
 
 #search-input {
-  padding-left: 40px; /* This ensures that text doesn't overlap with the search icon */
-  /* ... rest of the styles ... */
+  padding-left: 35px; 
 }
