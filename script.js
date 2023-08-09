@@ -7,8 +7,8 @@ function incrementCounter() {
 }
 
 function giveToCharity() { 
-  charity += 20; 
-  document.getElementById('charitySummariser').textContent = charity;
+  charity += 20;
+  document.getElementById('charitySummariser').textContent = charity + ' kr';
 }
 
 function showFireworks() {
