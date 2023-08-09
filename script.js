@@ -163,3 +163,60 @@ window.onload = function () {
     addCustomerToTable(customer.name, customer.kg, customer.rackets);
   });
 };
+
+document.getElementById('search-input').addEventListener('keyup', function() {
+  let query = this.value.toLowerCase();
+  
+  if(query === '') {
+      displayAllRows();
+      return;
+  }
+
+  let allRows = document.querySelectorAll('#customer-table tbody tr');
+  let results = [];
+
+  allRows.forEach(function(row) {
+      let nameCell = row.querySelector('td:first-child'); 
+      let nameText = nameCell.textContent;
+
+      if (nameText.toLowerCase().includes(query)) {
+          let highlightedText = nameText.replace(new RegExp(`(${query})`, 'gi'), '<span class="highlight">$1</span>');
+          nameCell.innerHTML = highlightedText;
+          results.push(row);
+      } else {
+          nameCell.innerHTML = nameText; // Reset to original text to remove any highlights
+      }
+  });
+
+  displayResults(results, query);
+});
+
+function displayResults(results, query) {
+  let tbody = document.querySelector('#customer-table tbody');
+  tbody.innerHTML = ''; // Clear previous results
+
+  if (results.length === 0) {
+      let noResultsRow = document.createElement('tr');
+      let noResultsCell = document.createElement('td');
+      noResultsCell.setAttribute('colspan', '3');  
+      noResultsCell.textContent = 'No results found';
+      noResultsRow.appendChild(noResultsCell);
+      tbody.appendChild(noResultsRow);
+      return;
+  }
+
+  results.forEach(function(row) {
+      tbody.appendChild(row.cloneNode(true)); 
+  });
+}
+
+function displayAllRows() {
+  let tbody = document.querySelector('#customer-table tbody');
+  tbody.innerHTML = ''; // Clear previous results
+
+  let allRows = document.querySelectorAll('#customer-table tbody tr');
+
+  allRows.forEach(function(row) {
+      tbody.appendChild(row.cloneNode(true));
+  });
+}

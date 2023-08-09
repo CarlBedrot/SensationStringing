@@ -208,3 +208,7 @@ button,
 .animated-button1:active {
   transform: scale(0.95);
 }
+
+.highlight {
+  background-color: yellow;
+}
