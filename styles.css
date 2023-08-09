@@ -2,30 +2,18 @@
 body {
     font-family: 'Orbitron', sans-serif;
      background: #000000;  
-    
-    
-     /* background-color: rgb(224, 217, 115);  */
     color: rgb(252, 122, 30);
-    /* font-family: 'Tron', sans-serif; */
     text-align: center;
     display: flex; /* Add this line */
     flex-direction: column; /* Add this line */
     min-height: 100vh; /* Add this line */
 }
 
-
-
-
 #content {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    flex-grow: 1; /* Add this line 
-
-  }
-  
-  main {
-    flex-grow: 1; /* This makes the main content grow and take up all available space */
+    flex-grow: 1; 
   }
   
 
