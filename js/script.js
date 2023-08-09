@@ -164,14 +164,18 @@ window.onload = function () {
   });
 };
 
-document.getElementById("customer-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-  const name = document.getElementById("customer-name").value;
-  const kg = document.getElementById("customer-kg").value;
-  const rackets = document.getElementById("customer-rackets").value;
-  addCustomer(name, kg, rackets);
-  e.target.reset();
-});
+const customerForm = document.getElementById("customer-form");
+
+if (customerForm) {
+    customerForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const name = document.getElementById("customer-name").value;
+        const kg = document.getElementById("customer-kg").value;
+        const rackets = document.getElementById("customer-rackets").value;
+        addCustomer(name, kg, rackets);
+        e.target.reset();
+    });
+}
 
 document.getElementById('search-input').addEventListener('keyup', function() {
   let query = this.value.toLowerCase();
